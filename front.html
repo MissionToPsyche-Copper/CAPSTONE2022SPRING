@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Informative Prototype 1
+    (Sound from Zapsplat)</title>
+
+    <!--Aframe -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script type="text/javascript" src="togglehidden.js"></script>
+
+    <!--Javascript-->
+  </head>
+
+  <!--Body: content of document-->
+  <body>
+    <audio controls="" autoplay loop >
+    <source src="https://github.com/anispas/CAPSTONE2022SPRING/blob/main/zapsplat_nature_ocean_waves_small_break_onto_sandy_beach_distant_surf_68468.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <!--HTML text-->
+    <div style="font-family:comic sans"; >
+
+    <a-scene
+      id="ascene"
+      cursor="rayOrigin: mouse"
+      raycaster="objects: [data-raycastable]"
+    >
+      <!--This tag preloads objects, spawn them in with the a-entity tag later-->
+      <a-assets>
+        <!-- Images -->
+        <img
+          id="Butterfly"
+          src=" "
+          crossorigin="anonymous"
+        />
+        
+      </a-assets>
+      <!--image plane-->
+      <a-plane
+        id="image"
+        src=""
+        position=".2 3.2 -4.0"
+        width="8.0"
+        height="7.0"
+        opacity="1"
+        color="white"
+        
+      ></a-plane>
+      
+
+      <!-- Text border -->
+      <a-plane
+        position=".2 -3 -4"
+        rotation="0 0 0"
+        width="8.0"
+        height="5.3"
+        color="grey"
+        opacity="1"
+      ></a-plane>
+
+      <a-text
+        id="text"
+        value="The name Psyche originally originates from the greeks; for them, psyche was the soul of the individual, often represented as a butterfly."
+        
+        material="color:blue; visible: false"
+        position="-3.0 -3 -4"
+        width="6.0"
+        color="black"
+        align="left"
+        letter-spacing="9.0"
+        line-height="72.5"
+        opacity="1"
+      
+      ></a-text>
+      <!--button-->
+
+      <a-text
+        id="toggleButton"
+        value="Greek Legend"
+        position="-3.1 -5.5 -2"
+        geometry="primitive: plane"
+        material="color:blue; visible: false"
+        width="8.0"
+        letter-spacing="1.0"
+        rotation="0 0 0"
+        color="green"
+        align="left"
+        opacity="1"
+        data-raycastable
+        togglehidden
+      ></a-text>
+      
+      <a-plane
+        id="toggleButton2"
+        position=".2 -6.3 -3"
+        rotation="0 0 0"
+        width="8."
+        height="1"
+        color="black"
+        data-raycastable
+        togglehidden
+      ></a-plane>
+      
+      <!-- Background -->
+			<a-plane 
+				position="0 0 -10" 
+				rotation="0 10 0" 
+				width="100"
+				height="100"
+				color="blue"
+			></a-plane>
+			
+      <button onclick="play()">Play Audio</button>
+
+      <a-entity id="rig">
+        <a-camera position=".1 0 5" look-controls="enabled:false"> </a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+<!-- http://www.eso.org/public/archives/images/screen/eso1501a.jpg 
+https://www.youtube.com/watch?v=klnwT3vGCPw
+<a-plane 
+				position="0 -5.5 -3"
+				rotation="0 0 0" 
+				width="7.6"
+				height=".8"
+				color="green"
+			></a-plane>-->
