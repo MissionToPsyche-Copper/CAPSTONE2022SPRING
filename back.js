@@ -19,19 +19,31 @@ AFRAME.registerComponent("togglehidden", {
 
     //get toggle button
     var tb = sceneEl.querySelector("#toggleButton");
-    
-    //get music
-    var audio = new Audio('audio_file.mp3');
-    audio.play();
-    
-    function play() {
-    var audio = new     Audio('https://github.com/anispas/CAPSTONE2022SPRING/blob/main/zapsplat_nature_ocean_waves_small_break_onto_sandy_beach_distant_surf_68468.mp3');
-  audio.play();
-  }
 
     //Give component a function
     this.toggleHide = function () {
       if (page == 0) {
+        //change text and font size 
+        for (var i = 0; i < els.length; i++) {
+          els[i].setAttribute(
+            "value",
+            "To find out a little more about the meaning of the word Psyche, click the START button below."
+          );
+          let currSpacing = els[i].getAttribute("letter-spacing");
+
+          let params = {
+            property: "letter-spacing",
+            to: 20.0,
+            dur: 10,
+          };
+          els[i].setAttribute("animation", params);
+        }
+        //change the image and text size
+        img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/WELCOME.png?v=1644023354575");
+        
+        page = 1;
+        tb.setAttribute("value", "START");
+      } else if(page == 1){
         //change text and font size 
         for (var i = 0; i < els.length; i++) {
           els[i].setAttribute(
@@ -48,11 +60,12 @@ AFRAME.registerComponent("togglehidden", {
           els[i].setAttribute("animation", params);
         }
         //change the image and text size
-          img.setAttribute("src", "");
+        img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/piril-osmanoglu-MIQCmVw1h0M-unsplash.jpg?v=1644017213537");
         
-        page = 1;
-        tb.setAttribute("value", "Greek Legend ");
-      } else {
+        page = 2;
+        tb.setAttribute("value", "CLICK FOR: Greek Legend");
+        
+      } else if(page == 2){
         //change the text and text size
         for (var i = 0; i < els.length; i++) {
           els[i].setAttribute(
@@ -67,12 +80,13 @@ AFRAME.registerComponent("togglehidden", {
             dur: 10,
           };
           els[i].setAttribute("animation", params);
+          //change the image back to Butterfly
+        img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/Objects.png?v=1644017120525");
         }
-        //change the image back to earth
-        img.setAttribute("src","");
+        
 
-        page = 0;
-        tb.setAttribute("value", "Meaning of the Word 'Psyche'");
+        page = 3;
+        tb.setAttribute("value","CLICK FOR: Meaning of 'Psyche'");
 
         //buttons
         let params = {
@@ -80,6 +94,30 @@ AFRAME.registerComponent("togglehidden", {
           to: 0.0,
           dur: 750,
         };
+      } else{
+        
+        //change the text and text size
+        for (var i = 0; i < els.length; i++) {
+          els[i].setAttribute(
+            "value",
+            "And that's all, folks! Feel free to START AGAIN, or check out the rest of the exhibit!"
+          );
+          let currOpacity = els[i].getAttribute("letter-spacing");
+
+          let params = {
+            property: "letter-spacing",
+            to: 9.0,
+            dur: 10,
+          };
+          els[i].setAttribute("animation", params);
+          //change the image back to Butterfly
+        img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/Ending.png?v=1644023887629");
+        }
+        
+
+        page = 0;
+        tb.setAttribute("value","START AGAIN!");
+        
       }
     };
 
