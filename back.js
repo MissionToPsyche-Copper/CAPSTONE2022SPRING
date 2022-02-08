@@ -29,6 +29,11 @@ AFRAME.registerComponent("togglehidden", {
             "value",
             "To find out a little more about the meaning of the word Psyche, click the START button below."
           );
+          
+          //change the image and text size
+        img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/WELCOME.png?v=1644023354575");
+        
+       
           let currSpacing = els[i].getAttribute("letter-spacing");
 
           let params = {
@@ -37,12 +42,10 @@ AFRAME.registerComponent("togglehidden", {
             dur: 10,
           };
           els[i].setAttribute("animation", params);
-        }
-        //change the image and text size
-        img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/WELCOME.png?v=1644023354575");
-        
-        page = 1;
+           page = 1;
         tb.setAttribute("value", "START");
+        }
+        
       } else if(page == 1){
         //change text and font size 
         for (var i = 0; i < els.length; i++) {
@@ -58,12 +61,14 @@ AFRAME.registerComponent("togglehidden", {
             dur: 10,
           };
           els[i].setAttribute("animation", params);
-        }
-        //change the image and text size
+          
+          //change the image and text size
         img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/piril-osmanoglu-MIQCmVw1h0M-unsplash.jpg?v=1644017213537");
         
         page = 2;
         tb.setAttribute("value", "CLICK FOR: Greek Legend");
+        }
+        
         
       } else if(page == 2){
         //change the text and text size
@@ -82,18 +87,18 @@ AFRAME.registerComponent("togglehidden", {
           els[i].setAttribute("animation", params);
           //change the image back to Butterfly
         img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/Objects.png?v=1644017120525");
-        }
-        
-
-        page = 3;
+          
+          page = 3;
         tb.setAttribute("value","CLICK FOR: Meaning of 'Psyche'");
 
         //buttons
-        let params = {
+        params = {
           property: "opacity",
           to: 0.0,
           dur: 750,
         };
+        }
+        
       } else{
         
         //change the text and text size
@@ -114,7 +119,6 @@ AFRAME.registerComponent("togglehidden", {
         img.setAttribute("src","https://cdn.glitch.global/cd5fd83c-c3ea-4273-a881-6b26955591f3/Ending.png?v=1644023887629");
         }
         
-
         page = 0;
         tb.setAttribute("value","START AGAIN!");
         
