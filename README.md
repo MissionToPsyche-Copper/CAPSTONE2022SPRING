@@ -6,4 +6,4 @@ This app was developed to be WebXR based, through a combination of css, HTML, gl
 
 The photos are from two seperate people: the bufferfly come a royalty-free website Unsplash, created by Pırıl Osmanoğlu. The Object.png came from a 3D image created by Thom, the graphic artist of our team. 
 
-Not much is needed to run the project; you can download both the files and run the .html file, or you can go to glitch here: https://scientific-whip-ninja.glitch.me/ , click on the clickme.html file, and the experience should remain largely the same. 
+Not much is needed to run the project; you can download both the files and run the .html file.
