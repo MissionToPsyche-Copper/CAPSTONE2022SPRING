@@ -6,4 +6,6 @@ This app was developed to be WebXR based, through a combination of css, HTML, gl
 
 The photos are from three seperate entities: the bufferfly I created myself, graphicdesignismypassion(2).png came from a 3D image created by Thom -exported to be a png by myself-, the graphic artist of our team, and the png of the Psyche Satellite was taken from ASU's website. 
 
-Not much is needed to run the project; you can download both the files and run the .html file.
+Not much is needed to run the project; using the QR code below
+![frame](https://user-images.githubusercontent.com/46544704/155007418-d03042b6-89d3-491a-a04a-0dcf7337980d.png)
+
