@@ -14,9 +14,7 @@ Not much is needed to run the project; using the QR code below, you should be ab
 
 
 Screenshots of the experience below:
+![Screenshot_20220223-155922](https://user-images.githubusercontent.com/46544704/155424083-804c35da-35f5-48a8-bd9f-b6ee6985c9a0.png)
 
 
-![Scree1](https://user-images.githubusercontent.com/46544704/155008250-ccf3ae70-fabf-4002-8236-fe45efa4b6ed.png)
-
-
-![Screenshot (Feb 21, 2022 11_11_23 AM)](https://user-images.githubusercontent.com/46544704/155008293-7defa1cf-152c-4b29-91ca-8a17602d7f97.png)
+![Screenshot_20220223-155929](https://user-images.githubusercontent.com/46544704/155424093-7a40d7fb-85bc-4631-ad0f-c778d8a3ee67.png)
